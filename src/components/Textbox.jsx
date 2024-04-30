@@ -33,7 +33,7 @@ function Textbox() {
     }, []);
     const handleTyping = (key) => {
         setTypedWord(prevState => {
-            if (typingWords[prevState['index']].toLowerCase() === key && prevState['index'] < totalChars && key !== 'Backspace') {
+            if (typingWords[prevState['index']] === key && prevState['index'] < totalChars && key !== 'Backspace') {
                 const typedWordState = prevState
                 typedWordState.valid = true;
                 setTypedWords(prevData => [...prevData, typedWordState])
